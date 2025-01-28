@@ -10,7 +10,14 @@ public static void main(String[] args){
     int n= s.nextInt();
 
     switch (n){
-        
+        case 1: login();
+        case 2: newuser();
+        default: System.err.println("Error");
     }
 }
+
+private void login(){
+    
+}
+
 }
