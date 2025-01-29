@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Main {
 
+    //variable
     static Scanner s;
 
     public static void main(String[] args) {
