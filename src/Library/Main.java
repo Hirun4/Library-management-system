@@ -32,6 +32,10 @@ private static void newuser(){
     String phonenumber = s.next();
     System.out.println("Enter email");
     String email = s.next();
+    int n2= s.nextInt();
+    if (n2 ==1) {
+        
+    }else
 }
 
 
