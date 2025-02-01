@@ -14,6 +14,7 @@ public class Main {
         s = new Scanner(System.in);
         int n = s.nextInt();
 
+        
         switch (n) {
             case 1:
                 login();
