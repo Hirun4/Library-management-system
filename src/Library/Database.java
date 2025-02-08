@@ -21,7 +21,9 @@ public class Database {
                 
             }
         }
-        
+
         return n;
     }
+
+    public User getUser(String phonenumber)
 }
