@@ -12,11 +12,11 @@ public class Database {
         usernames.add(s.getName());
     }
 
-    public boolean login(String phonenumber,String email) {
-        boolean n =  false;
+    public int login(String phonenumber,String email) {
+        int n=-1;
         for(User s : users){
             if (s.getPhoneNumber().matches(phonenumber) && s.getEmail().matches(email)) {
-                n= true;
+                n= users.indexOf(s);
                 break;
                 
             }
@@ -25,5 +25,8 @@ public class Database {
         return n;
     }
 
-    public User getUser(String phonenumber)
+    public User getUser(int n){
+        return users.get(n);
+       
+    }
 }
