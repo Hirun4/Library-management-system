@@ -1,15 +1,17 @@
 package Library;
 
 import java.util.Scanner;
+import javax.xml.crypto.Data;
 
 public class Main {
 
     
     static Scanner s;
+    static Database database;
 
     public static void main(String[] args) {
 
-        Database database= new Database();
+         database= new Database();
         System.out.println("Welcome to library management system!\n" + "1.Login\n2. new user");
         s = new Scanner(System.in);
         int n = s.nextInt();
@@ -30,6 +32,13 @@ public class Main {
         String phonenumber = s.next();
         System.out.println("Enter email");
         String email = s.next();
+        if (database.login(phonenumber, email) != -1) {
+            User user = database.getUser(database.login(phonenumber, email));
+            System.out.println("Welcome " + user.getName());
+        } else {
+            System.out.println("User not found");
+            
+        }
     }
 
     private static void newuser() {
