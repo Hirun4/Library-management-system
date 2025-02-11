@@ -32,11 +32,12 @@ public class Main {
         String phonenumber = s.next();
         System.out.println("Enter email");
         String email = s.next();
-        if (database.login(phonenumber, email) != -1) {
-            User user = database.getUser(database.login(phonenumber, email));
-            System.out.println("Welcome " + user.getName());
+        int n= database.login(phonenumber, email);
+        if (n != -1) {
+            User user = database.getUser(n);
+            
         } else {
-            System.out.println("User not found");
+            return;
             
         }
     }
@@ -51,6 +52,7 @@ public class Main {
         int n2 = s.nextInt();
         if (n2 == 1) {
             User admin = new Admn(name, email, phonenumber);
+            database.AddUser(admin);
         } else {
             User user = new User(name, email, phonenumber);
         }
