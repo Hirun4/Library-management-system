@@ -1,7 +1,6 @@
 package Library;
 
 import java.util.Scanner;
-import javax.xml.crypto.Data;
 
 public class Main {
 
@@ -12,12 +11,15 @@ public class Main {
     public static void main(String[] args) {
 
          database= new Database();
-        System.out.println("Welcome to library management system!\n" + "1.Login\n2. new user");
+        
+         int num;
+         while(num !=0){
+            System.out.println("Welcome to library management system!\n" + "0. Exit\n" + "1.Login\n2. new user");
         s = new Scanner(System.in);
-        int n = s.nextInt();
+        num  = s.nextInt();
 
         
-        switch (n) {
+        switch (num) {
             case 1:
                 login();
             case 2:
@@ -25,6 +27,8 @@ public class Main {
             default:
                 System.out.println("Error");
         }
+         }
+
     }
 
     private static void login() {
@@ -51,10 +55,11 @@ public class Main {
         String email = s.next();
         int n2 = s.nextInt();
         if (n2 == 1) {
-            User admin = new Admn(name, email, phonenumber);
+            User admin = new Admin(name, email, phonenumber);
             database.AddUser(admin);
         } else {
             User user = new User(name, email, phonenumber);
+            database.AddUser(user); 
         }
     }
 
