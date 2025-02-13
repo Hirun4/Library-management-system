@@ -13,7 +13,7 @@ public class Main {
          database= new Database();
         
          int num;
-         while(num !=0){
+         do {
             System.out.println("Welcome to library management system!\n" + "0. Exit\n" + "1.Login\n2. new user");
         s = new Scanner(System.in);
         num  = s.nextInt();
@@ -27,7 +27,7 @@ public class Main {
             default:
                 System.out.println("Error");
         }
-         }
+         }while(num!=0);
 
     }
 
