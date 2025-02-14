@@ -61,6 +61,7 @@ public class Main {
             User user = new User(name, email, phonenumber);
             database.AddUser(user); 
         }
+        System.out.println("User added successfully");
     }
 
 }
