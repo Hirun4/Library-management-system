@@ -39,6 +39,7 @@ public class Main {
         int n= database.login(phonenumber, email);
         if (n != -1) {
             User user = database.getUser(n);
+            System.out.println("Welcome " + user.getName());
             
         } else {
             return;
