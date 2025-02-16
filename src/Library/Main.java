@@ -11,10 +11,11 @@ public class Main {
     public static void main(String[] args) {
 
          database= new Database();
+         System.out.println("Welcome to the Library");
         
          int num;
          do {
-            System.out.println("Welcome to library management system!\n" + "0. Exit\n" + "1.Login\n2. new user");
+            System.out.println( "0. Exit\n" + "1.Login\n2. new user");
         s = new Scanner(System.in);
         num  = s.nextInt();
 
