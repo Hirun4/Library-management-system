@@ -25,8 +25,7 @@ public class Main {
                 login();
             case 2:
                 newuser();
-            default:
-                System.out.println("Error");
+            
         }
          }while(num!=0);
 
